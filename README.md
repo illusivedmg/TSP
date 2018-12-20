@@ -6,7 +6,7 @@ The original requirements stipulated achieving a Q of .8 in no more than 60 seco
 
 ### Algorithm
 
-Two methods of iteration - 
+Two methods of iteration: 
 
 * tempPathsToTry sets the number of initial paths to try, all distinct and randomly shuffled. Their costs are measured and the best one is sent to the next step.
 
@@ -17,24 +17,25 @@ Two methods of iteration -
 Time is measured as per each 1000-vertex graph.
 
 Q is calculated with 
-> Wmin/Wmax = Theoretical minimum/maximum path costs (num vertices * min/max edge weight)
-> 
-> Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)
+```Wmin/Wmax = Theoretical minimum/maximum path costs (num vertices * min/max edge weight)
+ 
+Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)```
 
 | Single | Path  | Time   |   Q   |
 |:------:|:-----:|:------:|:-----:|
-| 2500k  | 10    | ~60s   | ~.935 |
+| **2500k**  | *10*    | ~60s   | **~.935** |
 | 250k   | 250k  | ~41.3s | ~.91  |
 | 250k   | 50    | ~6.8s  | ~.91  |
 | 250k   | 10000 | ~8.8s  | ~.91  |
-| 50000  | 10    | ~2.51s | ~.875 |
+| 50000  | *10*    | ~2.51s | ~.875 |
 | 50000  | 250   | ~2.55s | ~.875 |
 | 10000  | 1000  | ~1.8s  | ~.82  |
-| 10000  | 250k  | ~36.5s | ~.82  | (!)
+| 10000  | 250k  | **~36.5s** | ~.82  |
 | 10000  | 2500  | ~2.0s  | ~.817 |
 | 1000   | 1000  | ~1.6s  | ~.71  |
 | 1000   | 10000 | ~2.8s  | ~.71  |
 | 1000   | 100   | ~1.5s  | ~.705 |
+| *10*    | **250k** | **~35.5s**  | *~.64* |
 
 ### Conclusion
 
@@ -46,4 +47,5 @@ Potentially useful as a case study in shotgun-pattern vs. quasi-directed pathfin
 * Set iter variables from cmd line (duh)
 * Threading
 * Format/populate edge weights for more standard TSP algo behavior
+* Use number of and specific permutations to bracket best solution 
 * Revisit in Adv Algorithms
