@@ -17,9 +17,11 @@ Two methods of iteration:
 Time is measured as per each 1000-vertex graph.
 
 Q is calculated with 
-> Wmin/Wmax = Theoretical minimum/maximum path costs (num vertices * min/max edge weight)
-> 
-> Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)
+```
+Wmin/Wmax = Theoretical minimum/maximum path costs (num vertices * min/max edge weight)
+
+Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)
+```
 
 |  Single   |   Path   |    Time    |     Q    |
 |:---------:|:--------:|:----------:|:--------:|
@@ -42,12 +44,12 @@ Q is calculated with
 ### Conclusion
 
 Potentially useful as a case study in shotgun-pattern vs. quasi-directed pathfinding:
-* Testing more paths is luck-based and typically produces very little performance gain per extra time spent.
-* Brute forcing more single random changes dominates performance both in terms of quality of path achieved.
+* Testing more paths is luck-based and typically produces very little performance gain, if any, per extra time spent.
+* Brute forcing more single random changes dominates performance both in terms of quality of path achieved and time efficiency.
 
 ##### TODO
-* Set iter variables from cmd line (duh)
-* Threading
-* Format/populate edge weights for more standard TSP algo behavior
-* Use number of and specific permutations to bracket best solution 
-* Revisit in Adv Algorithms
+###### Set iter variables from cmd line (duh)
+###### Threading
+###### Format/populate edge weights for more standard TSP algo behavior
+###### Use number of and specific permutations to bracket best solution 
+###### Revisit in Adv Algorithms
