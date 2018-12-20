@@ -37,6 +37,8 @@ Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)```
 | 1000   | 100   | ~1.5s  | ~.705 |
 | *10*    | **250k** | **~35.5s**  | *~.64* |
 
+####### Test with 2500k paths took over 5 minutes and 5GB of RAM for first graph.
+
 ### Conclusion
 
 Potentially useful as a case study in shotgun-pattern vs. quasi-directed pathfinding:
