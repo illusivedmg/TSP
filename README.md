@@ -23,8 +23,8 @@ Q is calculated with
 
 |  Single   |   Path   |    Time    |     Q    |
 |:---------:|:--------:|:----------:|:--------:|
-| **2500k** |  *10*    |  ~60s      | **~.93** |
-|  250k     | **250k** |  ~41.3s    | ~.91     |
+| **2500k** |  *10*    |  **~60s**  | **~.93** |
+|  250k     | **250k** | **~41.3s** | ~.91     |
 |  250k     |  50      |  ~6.8s     | ~.91     |
 |  250k     |  10000   |  ~8.8s     | ~.91     |
 |  50000    |  *10*    |  ~2.51s    | ~.875    |
@@ -45,7 +45,7 @@ Potentially useful as a case study in shotgun-pattern vs. quasi-directed pathfin
 * Testing more paths is luck-based and typically produces very little performance gain per extra time spent.
 * Brute forcing more single random changes dominates performance both in terms of quality of path achieved.
 
-###### TODO
+##### TODO
 * Set iter variables from cmd line (duh)
 * Threading
 * Format/populate edge weights for more standard TSP algo behavior
