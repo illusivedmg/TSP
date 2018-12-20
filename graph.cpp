@@ -44,8 +44,8 @@ double Graph::MeasurePathCost(std::vector<int>& fullPath) {
 
 void Graph::FindSolution_HillClimb() {
 
-    int numIters = 250;
-    int tempPathsToTry = 10000;
+    int numIters = 250000;
+    int tempPathsToTry = 50;
 
     int bestTempPath = 0;
     double bestTempPathCost = 1000000000.0;
@@ -69,6 +69,9 @@ void Graph::FindSolution_HillClimb() {
         citiesExceptZero.push_back(i);
     }
 
+    // std::cerr.precision(0); 
+    // std::cerr << "Paths:" << '\n' << std::fixed;
+
     // completely shuffle a number of paths, pick best
     for(i = 0; i < tempPathsToTry; i++) {
         std::random_shuffle( citiesExceptZero.begin(), citiesExceptZero.end() );
@@ -83,16 +86,18 @@ void Graph::FindSolution_HillClimb() {
             bestTempPath = i;
             bestTempPathCost = tempCost;
         }
-        std::cerr << "bestcost = " << tempCost << std::endl;
+        // std::cerr << "temp path cost = " << tempCost << std::endl;
     }
 
     tempPath.swap(tempPaths[bestTempPath]);
     currentCost = bestTempPathCost;
+
+    // std::cerr << "init path cost = " << currentCost << std::endl;
     
     while( currentCost < mBestCost ) {
         mBestCost = currentCost;
         mBestPath = fullPath;
-        while( n < mNumVertices * numIters ) {
+        while( n < numIters ) {
             //set temporary cycle as randomly selected neighbor cycle of best cycle
             t = (rand() % (mNumVertices - 3)) + 1;
             d = ( mNumVertices - 2 ) - t;
@@ -117,5 +122,6 @@ void Graph::FindSolution_HillClimb() {
             }
             n++;
         }
+        // std::cerr << "best path cost = " << currentCost << std::endl;
     }
 }
