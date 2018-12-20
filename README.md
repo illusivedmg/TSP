@@ -1,6 +1,6 @@
 # Traveling Salesman Problem
 
-Absolutely horrific - no threading or much knowledge of algorithms applied at all. Only the third or fourth program in not-Python I ever wrote, and written over top of my first Intro to Algorithms class. 
+Fair warning - only the third or fourth program in not-Python I ever wrote, and written over top of my first Intro to Algorithms class. 
 
 The original requirements stipulated achieving a Q of .8 in no more than 60 seconds per 1000-vertex graph. This program achieves that in about 2s with one core of an AMD FX-8350 running in the Bash for Windows VM, so maybe it's not all bad.
 
@@ -28,7 +28,7 @@ Q is calculated with
 | 50      | 250   | ~2.55s | ~.875 |
 | 10      | 2500  | ~2.0s  | ~.817 |
 | 2500    | 10    | <1min  | ~.935 |
-| 250     | 1000  | ~8.8s  | ~.91  |
+| 250     | 10000 | ~8.8s  | ~.91  |
 
 ### Conclusion
 
@@ -37,6 +37,7 @@ Potentially useful as a case study in shotgun-pattern vs. quasi-directed pathfin
 * Making more single random changes dominates performance both in terms of quality of path achieved and time taken. Brute force.
 
 ###### TODO
+* Set iter variables from cmd line (duh)
 * Threading
 * Format/Populate edge weights for more standard TSP algo behavior
 * Revisit in Adv Algorithms
