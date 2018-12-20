@@ -85,6 +85,8 @@ void Graph::FindSolution_HillClimb() {
         if(tempCost < bestTempPathCost) {
             bestTempPath = i;
             bestTempPathCost = tempCost;
+        } else {
+            tempPaths[i].clear();
         }
         // std::cerr << "temp path cost = " << tempCost << std::endl;
     }
