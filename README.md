@@ -48,8 +48,8 @@ Potentially useful as a case study in shotgun-pattern vs. quasi-directed pathfin
 * Brute forcing more single random changes dominates performance both in terms of quality of path achieved and time efficiency.
 
 ##### TODO
-###### Set iter variables from cmd line (duh)
-###### Threading
-###### Format/populate edge weights for more standard TSP algo behavior
-###### Use number of and specific permutations to bracket best solution 
-###### Revisit in Adv Algorithms
+* Set iter variables from cmd line (duh)
+* Threading
+* Format/populate edge weights for more standard TSP algo behavior
+* Use number of and specific permutations to bracket best solution 
+* Revisit in Adv Algorithms
