@@ -17,9 +17,9 @@ Two methods of iteration:
 Time is measured as per each 1000-vertex graph.
 
 Q is calculated with 
-```Wmin/Wmax = Theoretical minimum/maximum path costs (num vertices * min/max edge weight)
- 
-Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)```
+> Wmin/Wmax = Theoretical minimum/maximum path costs (num vertices * min/max edge weight)
+> 
+> Q = 1 - ( costOfPath - Wmin) / (Wmax - Wmin)
 
 |  Single   |   Path   |    Time    |     Q    |
 |:---------:|:--------:|:----------:|:--------:|
